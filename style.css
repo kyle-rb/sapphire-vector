@@ -41,16 +41,18 @@ body {
 #pokeball-mudkip, #pokeball-mudkip-box, #pokeball-torchic, #pokeball-torchic-box,
 #starburst-mudkip, #starburst-torchic,
 #pokemon-vibrate-box, #mudkip-back, #torchic-back,
-#bullet-seed-box, #bullet-seed-1, #bullet-seed-2, #bullet-seed-3, #bullet-seed-4,
+#bullet-seed-wisp-box, #bullet-seed-1, #bullet-seed-2, #bullet-seed-3, #bullet-seed-4,
 #bullet-seed-5, #bullet-seed-6, #bullet-seed-7, #bullet-seed-8, #bullet-seed-9, #bullet-seed-10,
+
 #water-gun-ember-box, #water-gun-1, #water-gun-2, #water-gun-3, #water-gun-4,
-#water-gun-5, #water-gun-6, #water-gun-7, #water-gun-8, #water-gun-9, #water-gun-10 {
+#water-gun-5, #water-gun-6, #water-gun-7, #water-gun-8, #water-gun-9, #water-gun-10,
+#ember-1, #ember-2, #ember-3, #ember-4, #ember-5, #ember-6, #ember-7, #ember-8, #ember-9, #ember-10,#placeholder-remove-me {
     display: block;
     position: absolute;
     opacity: 0;
     animation-duration: 100s;
     animation-timing-function: linear;
-    animation-delay: -48s;
+    /* animation-delay: -39s; */
     /* animation-play-state: paused; */
 }
 
@@ -432,31 +434,31 @@ body {
     animation-name: torchic-back;
 }
 
-#bullet-seed-box {
+#bullet-seed-wisp-box {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    animation-name: bullet-seed-box;
+    animation-name: bullet-seed-wisp-box;
 }
 #bullet-seed-1, #bullet-seed-2, #bullet-seed-3, #bullet-seed-4, #bullet-seed-5,
 #bullet-seed-6, #bullet-seed-7, #bullet-seed-8, #bullet-seed-9, #bullet-seed-10 {
     width: 3%;
     animation-name: bullet-seed;
     animation-duration: 0.2s;
-    animation-delay: 45.8s; /* this is the real base value on seed 1 */
+    animation-delay: 45.8s;
     animation-iteration-count: 12;
 }
-#bullet-seed-1  { animation-delay: 0.80s; top: 22%; left: 55%; }
-#bullet-seed-2  { animation-delay: 0.82s; top: 20%; left: 57%; }
-#bullet-seed-3  { animation-delay: 0.84s; top: 24%; left: 51%; }
-#bullet-seed-4  { animation-delay: 0.86s; top: 20%; left: 50%; }
-#bullet-seed-5  { animation-delay: 0.88s; top: 24%; left: 57%; }
-#bullet-seed-6  { animation-delay: 0.90s; top: 22%; left: 55%; }
-#bullet-seed-7  { animation-delay: 0.92s; top: 20%; left: 57%; }
-#bullet-seed-8  { animation-delay: 0.94s; top: 24%; left: 51%; }
-#bullet-seed-9  { animation-delay: 0.96s; top: 20%; left: 50%; }
-#bullet-seed-10 { animation-delay: 0.98s; top: 24%; left: 57%; }
+#bullet-seed-1  { top: 22%; left: 55%; animation-delay: 45.80s; }
+#bullet-seed-2  { top: 20%; left: 57%; animation-delay: 45.82s; }
+#bullet-seed-3  { top: 24%; left: 51%; animation-delay: 45.84s; }
+#bullet-seed-4  { top: 20%; left: 50%; animation-delay: 45.86s; }
+#bullet-seed-5  { top: 24%; left: 57%; animation-delay: 45.88s; }
+#bullet-seed-6  { top: 22%; left: 55%; animation-delay: 45.90s; }
+#bullet-seed-7  { top: 20%; left: 57%; animation-delay: 45.92s; }
+#bullet-seed-8  { top: 24%; left: 51%; animation-delay: 45.94s; }
+#bullet-seed-9  { top: 20%; left: 50%; animation-delay: 45.96s; }
+#bullet-seed-10 { top: 24%; left: 57%; animation-delay: 45.98s; }
 
 #water-gun-ember-box {
     width: 100%;
@@ -470,16 +472,35 @@ body {
     width: 8%;
     animation-name: water-gun;
 }
-#water-gun-1  { top: 72%; left: 42%; animation-delay: -48.0s }
-#water-gun-2  { top: 63%; left: 47%; animation-delay: -47.98s }
-#water-gun-3  { top: 54%; left: 52%; animation-delay: -47.96s }
-#water-gun-4  { top: 45%; left: 57%; animation-delay: -47.94s }
-#water-gun-5  { top: 36%; left: 62%; animation-delay: -47.92s }
-#water-gun-6  { top: 27%; left: 67%; animation-delay: -47.90s }
-#water-gun-7  { top: 18%; left: 72%; animation-delay: -47.88s }
-#water-gun-8  { top:  9%; left: 77%; animation-delay: -47.86s }
-#water-gun-9  { top:  0%; left: 82%; animation-delay: -47.84s }
-#water-gun-10 { top: -9%; left: 87%; animation-delay: -47.82s }
+#water-gun-1  { top: 72%; left: 42%; animation-delay: 0.00s; } /* animation-delay: -48.00s; */
+#water-gun-2  { top: 63%; left: 47%; animation-delay: 0.02s; } /* animation-delay: -47.98s; */
+#water-gun-3  { top: 54%; left: 52%; animation-delay: 0.04s; } /* animation-delay: -47.96s; */
+#water-gun-4  { top: 45%; left: 57%; animation-delay: 0.06s; } /* animation-delay: -47.94s; */
+#water-gun-5  { top: 36%; left: 62%; animation-delay: 0.08s; } /* animation-delay: -47.92s; */
+#water-gun-6  { top: 27%; left: 67%; animation-delay: 0.10s; } /* animation-delay: -47.90s; */
+#water-gun-7  { top: 18%; left: 72%; animation-delay: 0.12s; } /* animation-delay: -47.88s; */
+#water-gun-8  { top:  9%; left: 77%; animation-delay: 0.14s; } /* animation-delay: -47.86s; */
+#water-gun-9  { top:  0%; left: 82%; animation-delay: 0.16s; } /* animation-delay: -47.84s; */
+#water-gun-10 { top: -9%; left: 87%; animation-delay: 0.18s; } /* animation-delay: -47.82s; */
+
+#ember-1, #ember-2, #ember-3, #ember-4, #ember-5,
+#ember-6, #ember-7, #ember-8, #ember-9, #ember-10 {
+    width: 3%;
+    animation-name: ember;
+    animation-duration: 0.2s;
+    animation-delay: 49.5%;
+    animation-iteration-count: 12;
+}
+#ember-1  { top: 70%; left: 22%; animation-delay: 49.50s; }
+#ember-2  { top: 66%; left: 24%; animation-delay: 49.52s; }
+#ember-3  { top: 74%; left: 24%; animation-delay: 49.54s; }
+#ember-4  { top: 66%; left: 20%; animation-delay: 49.56s; }
+#ember-5  { top: 74%; left: 20%; animation-delay: 49.58s; }
+#ember-6  { top: 70%; left: 22%; animation-delay: 49.60s; }
+#ember-7  { top: 66%; left: 24%; animation-delay: 49.62s; }
+#ember-8  { top: 74%; left: 24%; animation-delay: 49.64s; }
+#ember-9  { top: 66%; left: 20%; animation-delay: 49.66s; }
+#ember-10 { top: 74%; left: 20%; animation-delay: 49.68s; }
 
 
 
@@ -880,7 +901,7 @@ body {
 @keyframes duskull {
     0%    { opacity: 0;
             transform: translate(0, 0) scale(1) scaleX(1); }
-    39%   { opacity: 0;
+    40%   { opacity: 0;
             transform: translate(0, 0) scale(1) scaleX(1); }
     40.1% { opacity: 1; }
     40.3% { transform: translate(90%, -90%) scale(1) scaleX(1); }
@@ -1085,7 +1106,7 @@ body {
             transform: translate(0, 0); }
 }
 
-@keyframes bullet-seed-box {
+@keyframes bullet-seed-wisp-box {
     0%    { opacity: 0; }
     45.7% { opacity: 0; }
     45.8% { opacity: 1; }
@@ -1140,4 +1161,10 @@ body {
             transform: translateY(0) scale(1); }
     100%  { opacity: 0;
             transform: translateY(0) scale(1); }
+}
+@keyframes ember {
+    0%    { opacity: 1;
+            transform: translate(0, 0) scale(1); }
+    100%  { opacity: 1;
+            transform: translate(1600%, -1200%) scale(4); }
 }
