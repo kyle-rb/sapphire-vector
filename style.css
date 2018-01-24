@@ -41,18 +41,19 @@ body {
 #pokeball-mudkip, #pokeball-mudkip-box, #pokeball-torchic, #pokeball-torchic-box,
 #starburst-mudkip, #starburst-torchic,
 #pokemon-vibrate-box, #mudkip-back, #torchic-back,
-#bullet-seed-wisp-box, #bullet-seed-1, #bullet-seed-2, #bullet-seed-3, #bullet-seed-4,
+#bullet-wisp-box, #bullet-seed-1, #bullet-seed-2, #bullet-seed-3, #bullet-seed-4,
 #bullet-seed-5, #bullet-seed-6, #bullet-seed-7, #bullet-seed-8, #bullet-seed-9, #bullet-seed-10,
-
+#will-o-wisp-box, .will-o-wisp, #will-o-wisp-1, #will-o-wisp-2, #will-o-wisp-3,
+#will-o-wisp-4, #will-o-wisp-5, #will-o-wisp-6, #will-o-wisp-7, #will-o-wisp-8,
 #water-gun-ember-box, #water-gun-1, #water-gun-2, #water-gun-3, #water-gun-4,
 #water-gun-5, #water-gun-6, #water-gun-7, #water-gun-8, #water-gun-9, #water-gun-10,
-#ember-1, #ember-2, #ember-3, #ember-4, #ember-5, #ember-6, #ember-7, #ember-8, #ember-9, #ember-10,#placeholder-remove-me {
+#ember-1, #ember-2, #ember-3, #ember-4, #ember-5, #ember-6, #ember-7, #ember-8, #ember-9, #ember-10,#duskull-cover-vibrate-box, #duskull-cover-box, #duskull-clip, #duskull-cover {
     display: block;
     position: absolute;
     opacity: 0;
     animation-duration: 100s;
     animation-timing-function: linear;
-    /* animation-delay: -39s; */
+    /* animation-delay: -46s; */
     /* animation-play-state: paused; */
 }
 
@@ -333,6 +334,39 @@ body {
     left: -20%;
     animation-name: duskull;
 }
+#duskull-cover-vibrate-box {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation-name: pokemon-vibrate;
+    animation-duration: 0.05s;
+    animation-delay: 45s;
+    animation-iteration-count: 160;
+    animation-direction: alternate;
+}
+#duskull-cover-box { /* contains second instance of duskull image to cover will-o-wisp */
+    width: 21%;
+    height: 62.4%; /* need actual image height for transforms */
+    top: 95%;
+    left: -20%;
+    animation-name: duskull;
+}
+#duskull-clip { /* covers bottom portion of second instance */
+    width: 100%;
+    height: 45%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 1;
+}
+#duskull-cover {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
 
 #trainer-box {
     width: 34%;
@@ -416,9 +450,8 @@ body {
     opacity: 1;
     animation-name: pokemon-vibrate;
     animation-duration: 0.05s;
-    animation-delay: 45s; /* TODO: set this for real */
-    animation-delay: 0s;
-    animation-iteration-count: 140; /* TODO: set this to the right amount */
+    animation-delay: 45s;
+    animation-iteration-count: 160;
     animation-direction: alternate;
 }
 #mudkip-back {
@@ -434,12 +467,12 @@ body {
     animation-name: torchic-back;
 }
 
-#bullet-seed-wisp-box {
+#bullet-wisp-box {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    animation-name: bullet-seed-wisp-box;
+    animation-name: bullet-wisp-box;
 }
 #bullet-seed-1, #bullet-seed-2, #bullet-seed-3, #bullet-seed-4, #bullet-seed-5,
 #bullet-seed-6, #bullet-seed-7, #bullet-seed-8, #bullet-seed-9, #bullet-seed-10 {
@@ -459,6 +492,42 @@ body {
 #bullet-seed-8  { top: 24%; left: 51%; animation-delay: 45.94s; }
 #bullet-seed-9  { top: 20%; left: 50%; animation-delay: 45.96s; }
 #bullet-seed-10 { top: 24%; left: 57%; animation-delay: 45.98s; }
+
+#will-o-wisp-box {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation-name: will-o-wisp-box;
+}
+.will-o-wisp {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation-name: will-o-wisp-bob;
+    animation-duration: 0.3s; /* for looped bobbing animation */
+    animation-delay: 46s;
+    animation-iteration-count: 15; /* TODO: figure out a proper value */
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#will-o-wisp-1, #will-o-wisp-2, #will-o-wisp-3, #will-o-wisp-4,
+#will-o-wisp-5, #will-o-wisp-6, #will-o-wisp-7, #will-o-wisp-8 {
+    width: 5%;
+    height: 16%; /* set height manually for transforms */
+    top: 35%;
+    right: 19%;
+    animation-name: will-o-wisp;
+}
+#will-o-wisp-1  { animation-delay: -0.0s; } /* animation-delay: 0.0s; */
+#will-o-wisp-2  { animation-delay: -0.4s; } /* animation-delay: 0.4s; */
+#will-o-wisp-3  { animation-delay: -0.8s; } /* animation-delay: 0.8s; */
+#will-o-wisp-4  { animation-delay: -1.2s; } /* animation-delay: 1.2s; */
+#will-o-wisp-5  { animation-delay: -1.6s; } /* animation-delay: 1.6s; */
+#will-o-wisp-6  { animation-delay: -2.0s; } /* animation-delay: 2.0s; */
+#will-o-wisp-7  { animation-delay: -2.4s; } /* animation-delay: 2.4s; */
+#will-o-wisp-8  { animation-delay: -2.8s; } /* animation-delay: 2.8s; */
 
 #water-gun-ember-box {
     width: 100%;
@@ -558,6 +627,7 @@ body {
     6.8%  { transform: translate(-46%, 30%); }
     6.9%  { transform: translate(-45%, 31%); }
     7.7%  { transform: translate(-45%, 85%); }
+    7.8%  { transform: translate(0, 0); }
     100%  { transform: translate(0, 0); }
 }
 @keyframes droplet-leaf {
@@ -928,8 +998,9 @@ body {
     52.5% { opacity: 1; }
     52.6% { opacity: 0;
             transform: translate(420%, -160%) scale(1) scaleX(-1); }
-    52.7% { transform: translate(0, 0) scale(1) scaleX(-1); }
-    100%  { opacity: 0; }
+    52.7% { transform: translate(0, 0) scale(1) scaleX(1); }
+    100%  { opacity: 0;
+            transform: translate(0, 0) scale(1) scaleX(1); }
 }
 
 @keyframes trainer-box {
@@ -1106,7 +1177,7 @@ body {
             transform: translate(0, 0); }
 }
 
-@keyframes bullet-seed-wisp-box {
+@keyframes bullet-wisp-box {
     0%    { opacity: 0; }
     45.7% { opacity: 0; }
     45.8% { opacity: 1; }
@@ -1122,12 +1193,48 @@ body {
 }
 
 @keyframes will-o-wisp-box {
-    0%    { opacity: 0; }
-    100%  { opacity: 0; }
+    0%    { opacity: 0;
+            transform: translate(0, 0); }
+    46.5% { transform: translate(0, 0); }
+    46.6% { opacity: 0;
+            transform: translate(25%, -25%); }
+    46.7% { opacity: 1; }
+    46.9% { transform: translate(0, 0); }
+    48.0% { opacity: 1; }
+    48.1% { opacity: 0; }
+    100%  { opacity: 0;
+            transform: translate(0, 0); }
+}
+@keyframes will-o-wisp-bob {
+    0%    { transform: translateY(-50%); }
+    100%  { transform: translateY(50%); }
 }
 @keyframes will-o-wisp {
-    0%    { opacity: 0; }
-    100%  { opacity: 0; }
+    0%    { opacity: 0;
+            transform: translate(0, 0); }
+    46.6% { opacity: 0;
+            transform: translate(0, 0); }
+    46.7% { opacity: 1; }
+    47.0% { transform: translate(-250%, 0); }
+    47.4% { transform: translate(-350%, -100%); }
+    47.8% { transform: translate(-250%, -200%); }
+    48.2% { transform: translate(0, -250%); }
+    48.6% { transform: translate(250%, -200%); }
+    49.0% { transform: translate(350%, -100%); }
+    49.4% { transform: translate(250%, 0); }
+    49.8% { transform: translate(0, 0); }
+    50.2% { transform: translate(-250%, 0); }
+    50.6% { transform: translate(-350%, -100%); }
+    51.0% { transform: translate(-250%, -200%); }
+    51.4% { transform: translate(0, -250%); }
+    51.8% { transform: translate(250%, -200%); }
+    52.2% { transform: translate(350%, -100%); }
+    52.6% { transform: translate(250%, 0); }
+    53.0% { transform: translate(0, 0); }
+    53.1% { opacity: 1; }
+    53.2% { opacity: 0; }
+    100%  { opacity: 0;
+            transform: translate(0, 0); }
 }
 
 @keyframes water-gun-ember-box {
