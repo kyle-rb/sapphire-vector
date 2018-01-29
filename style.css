@@ -47,13 +47,16 @@ body {
 #will-o-wisp-4, #will-o-wisp-5, #will-o-wisp-6, #will-o-wisp-7, #will-o-wisp-8,
 #water-gun-ember-box, #water-gun-1, #water-gun-2, #water-gun-3, #water-gun-4,
 #water-gun-5, #water-gun-6, #water-gun-7, #water-gun-8, #water-gun-9, #water-gun-10,
-#ember-1, #ember-2, #ember-3, #ember-4, #ember-5, #ember-6, #ember-7, #ember-8, #ember-9, #ember-10,#duskull-cover-vibrate-box, #duskull-cover-box, #duskull-clip, #duskull-cover {
+#ember-1, #ember-2, #ember-3, #ember-4, #ember-5, #ember-6, #ember-7, #ember-8, #ember-9, #ember-10,
+#duskull-cover-vibrate-box, #duskull-cover-box, #duskull-clip, #duskull-cover,
+#pokemon-logo, #sapphire-version, #start-box, #kyogre-body, #kyogre-lines, #kyogre-eyes,
+#press-start, #game-freak-start {
     display: block;
     position: absolute;
     opacity: 0;
     animation-duration: 100s;
     animation-timing-function: linear;
-    /* animation-delay: -46s; */
+    /* animation-delay: -60s; */
     /* animation-play-state: paused; */
 }
 
@@ -506,9 +509,9 @@ body {
     left: 0;
     opacity: 1;
     animation-name: will-o-wisp-bob;
-    animation-duration: 0.3s; /* for looped bobbing animation */
+    animation-duration: 0.3s;
     animation-delay: 46s;
-    animation-iteration-count: 15; /* TODO: figure out a proper value */
+    animation-iteration-count: 15;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
@@ -571,6 +574,71 @@ body {
 #ember-9  { top: 66%; left: 20%; animation-delay: 49.66s; }
 #ember-10 { top: 74%; left: 20%; animation-delay: 49.68s; }
 
+#pokemon-logo {
+    width: 72%;
+    top: -2%;
+    left: 13%;
+    opacity: 1;
+    animation-name: pokemon-logo;
+}
+#sapphire-version {
+    width: 50%;
+    top: 26%;
+    left: 25%;
+    opacity: 1;
+    animation-name: sapphire-version;
+}
+
+#start-box {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation-name: start-box;
+}
+#kyogre-body {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation-duration: unset;
+}
+#kyogre-lines {
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation-name: kyogre-lines;
+    animation-duration: 2.1s; /* TODO: set this */
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    /* animation-delay: 60s; */
+}
+#kyogre-eyes {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation-duration: unset;
+}
+#press-start {
+    width: 41%;
+    top: 58%;
+    left: 30%;
+    animation-name: press-start;
+    animation-duration: 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    /* animation-delay: 60s; */
+}
+#game-freak-start {
+    width: 65%;
+    top: 83%;
+    left: 17%;
+    opacity: 1;
+    animation-duration: unset;
+}
+
 
 
 /*
@@ -579,20 +647,28 @@ body {
  */
 
 @keyframes white-box {
-    0%    { opacity: 1; }
+    0%    { opacity: 1; } /* initial fade in */
     0.5%  { opacity: 0; }
     19.8% { opacity: 0; }
-    20.1% { opacity: 1; }
+    20.1% { opacity: 1; } /* transition from leaf scene to bike scene */
     20.3% { opacity: 1; }
     20.6% { opacity: 0; }
     34%   { opacity: 0; }
-    36%   { opacity: 1; }
+    36%   { opacity: 1; } /* transition from bike scene to battle scene */
     38.7% { opacity: 1; }
     38.8% { opacity: 0; }
     52.1% { opacity: 0; }
-    52.9% { opacity: 1; }
-    53.8% { opacity: 1; }
+    52.9% { opacity: 1; } /* transition from battle scene to pokemon logo */
+    53.7% { opacity: 1; }
     54.1% { opacity: 0; }
+    55.6% { opacity: 0; }
+    55.9% { opacity: 1; } /* first flash behind pokemon logo */
+    56.1% { opacity: 1; }
+    56.4% { opacity: 0; }
+    57.4% { opacity: 0; }
+    57.7% { opacity: 1; } /* second flash behind pokemon logo */
+    57.9% { opacity: 1; }
+    58.2% { opacity: 0; }
     100%  { opacity: 0; }
 }
 
@@ -636,8 +712,8 @@ body {
             transform: scaleY(0.6); }
     6%    { transform: scaleY(0.6); }
     6.1%  { transform: scaleY(1); }
-    7.7%  { opacity: 1; }
-    7.8%  { opacity: 0; }
+    7.6%  { opacity: 1; }
+    7.7%  { opacity: 0; }
     100%  { opacity: 0; }
 }
 
@@ -1274,4 +1350,45 @@ body {
             transform: translate(0, 0) scale(1); }
     100%  { opacity: 1;
             transform: translate(1600%, -1200%) scale(4); }
+}
+
+@keyframes pokemon-logo {
+    0%    { opacity: 0;
+            transform: translateY(0); }
+    53.4% { transform: translateY(0); }
+    53.7% { opacity: 0;
+            transform: translateY(50%); }
+    54.1% { opacity: 1; }
+    58.3% { transform: translateY(50%); }
+    59.4% { transform: translateY(0); }
+    100%  { opacity: 1;
+            transform: translateY(0); }
+}
+@keyframes sapphire-version {
+    0%    { opacity: 0;
+            transform: translateY(0); }
+    58.8% { transform: translateY(0); }
+    58.9% { opacity: 0;
+            transform: translateY(-50%); }
+    59.4% { opacity: 1;
+            transform: translateY(0); }
+    100%  { opacity: 1;
+            transform: translateY(0); }
+}
+
+@keyframes start-box {
+    0%    { opacity: 0; }
+    60.8% { opacity: 0; }
+    60.9% { opacity: 1; }
+    100%  { opacity: 1; }
+}
+@keyframes kyogre-lines {
+    0%    { opacity: 0; }
+    100%  { opacity: 1; }
+}
+@keyframes press-start {
+    0%    { opacity: 0; }
+    50%   { opacity: 0; }
+    50.1% { opacity: 1; }
+    100%  { opacity: 1; }
 }
