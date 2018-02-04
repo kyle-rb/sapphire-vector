@@ -1,5 +1,9 @@
-# video file
-pokemon-sapphire-opening.mp4
+# video files
+*.mp4
+
+# some working directories
+svg-unoptimized/
+temp/
 
 # emacs generated files
 *~

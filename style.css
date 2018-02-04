@@ -10,14 +10,14 @@ body {
 
 /* hides the overflow in the images that should already be hidden in rendering */
 /* also lets us do constraints based on percentages */
-.viewbox {
+#viewbox {
     position: absolute;
     width: 100vw;
     height: 56.25vw;
     overflow: hidden;
 }
 @media screen and (min-aspect-ratio: 16/9) {
-    .viewbox {
+    #viewbox {
         width: 178vh;
         height: 100vh;
         left: calc(50vw - 89vh); /* (fullWidth - actualWidth) / 2 */
@@ -50,13 +50,15 @@ body {
 #ember-1, #ember-2, #ember-3, #ember-4, #ember-5, #ember-6, #ember-7, #ember-8, #ember-9, #ember-10,
 #duskull-cover-vibrate-box, #duskull-cover-box, #duskull-clip, #duskull-cover,
 #pokemon-logo, #sapphire-version, #start-box, #kyogre-body, #kyogre-lines, #kyogre-eyes,
+#bubbles-1, #bubbles-2, #bubbles-3, #bubbles-4, #bubbles-5, #bubbles-6, #bubbles-7, #bubbles-8,
+#bubbles-9, #bubbles-10, #bubbles-11, #bubbles-12, #bubbles-13, #bubbles-14, #bubbles-15,
 #press-start, #game-freak-start {
     display: block;
     position: absolute;
     opacity: 0;
     animation-duration: 100s;
     animation-timing-function: linear;
-    /* animation-delay: -60s; */
+    /* animation-delay: -55s; */
     /* animation-play-state: paused; */
 }
 
@@ -99,7 +101,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    opacity: 1;
+    opacity: 0.7;
     animation-name: droplet-leaf-box;
 }
 #droplet-leaf {
@@ -128,7 +130,7 @@ body {
     width: 3%;
     top: -9%;
     left: 19%;
-    opacity: 1;
+    opacity: 0.7;
     animation-duration: unset; /* probably not necessary with no name specified */
 }
 #ripple-left-1, #ripple-left-2, #ripple-left-3 {
@@ -152,7 +154,7 @@ body {
     width: 3%;
     top: -9%;
     right: 15%;
-    opacity: 1;
+    opacity: 0.7;
     animation-duration: unset; /* probably not necessary with no name specified */
 }
 #ripple-right-1, #ripple-right-2, #ripple-right-3 {
@@ -609,10 +611,10 @@ body {
     top: 0;
     left: 0;
     animation-name: kyogre-lines;
-    animation-duration: 2.1s; /* TODO: set this */
+    animation-duration: 2.1s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    /* animation-delay: 60s; */
+    animation-delay: 60s;
 }
 #kyogre-eyes {
     width: 100%;
@@ -638,6 +640,47 @@ body {
     opacity: 1;
     animation-duration: unset;
 }
+
+.bubbles { /* position must be static in order for the enclosing element to adopt its height */
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.25;
+    animation-name: bubbles-skew;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bubbles-1, #bubbles-2, #bubbles-3, #bubbles-4, #bubbles-5, #bubbles-6, #bubbles-7, #bubbles-8, #bubbles-9, #bubbles-10, #bubbles-11, #bubbles-12, #bubbles-13, #bubbles-14, #bubbles-15 {
+    width: 14%;
+    top: 110%;
+    opacity: 1;
+    animation-name: bubbles-rise;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+#bubbles-1  { left: -5%; animation-delay: 55s; }
+#bubbles-2  { left:  5%; animation-delay: 59s; }
+#bubbles-3  { left: 10%; animation-delay: 58s; }
+#bubbles-4  { left: 15%; animation-delay: 56s; }
+#bubbles-5  { left: 20%; animation-delay: 60s; }
+#bubbles-6  { left: 23%; animation-delay: 57s; }
+#bubbles-7  { left: 30%; animation-delay: 55s; }
+#bubbles-8  { left: 40%; animation-delay: 59s; }
+#bubbles-9  { left: 45%; animation-delay: 58s; }
+#bubbles-10 { left: 48%; animation-delay: 61s; }
+#bubbles-11 { left: 55%; animation-delay: 60s; }
+#bubbles-12 { left: 65%; animation-delay: 57s; }
+#bubbles-13 { left: 72%; animation-delay: 55s; }
+#bubbles-14 { left: 80%; animation-delay: 61s; }
+#bubbles-15 { left: 90%; animation-delay: 58s; }
+#bubbles-1 .bubbles, #bubbles-4 .bubbles, #bubbles-7 .bubbles,
+#bubbles10 .bubbles, #bubbles-13 .bubbles { animation-delay: 55s; }
+#bubbles-2 .bubbles, #bubbles-5 .bubbles, #bubbles-8 .bubbles,
+#bubbles11 .bubbles, #bubbles-14 .bubbles { animation-delay: 55.3s; }
+#bubbles-3 .bubbles, #bubbles-6 .bubbles, #bubbles-9 .bubbles,
+#bubbles12 .bubbles, #bubbles-15 .bubbles { animation-delay: 55.6s; }
 
 
 
@@ -1391,4 +1434,12 @@ body {
     50%   { opacity: 0; }
     50.1% { opacity: 1; }
     100%  { opacity: 1; }
+}
+@keyframes bubbles-skew {
+    0%    { transform: skew(-20deg); }
+    100%  { transform: skew(20deg); }
+}
+@keyframes bubbles-rise {
+    0%    { transform: translateY(0); }
+    100%  { transform: translateY(-500%); }
 }
