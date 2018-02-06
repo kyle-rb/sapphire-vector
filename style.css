@@ -8,6 +8,21 @@ body {
     background-color: #000000;
 }
 
+footer {
+    position: absolute;
+    top: 56.25vw;
+    margin: 0 16px;
+    font-family: verdana, sans-serif;
+    color: #f0f0f0;
+}
+
+a {
+    color: #f0f0f0;
+}
+a:hover {
+    color: #e0e0e0;
+}
+
 /* hides the overflow in the images that should already be hidden in rendering */
 /* also lets us do constraints based on percentages */
 #viewbox {
@@ -21,6 +36,9 @@ body {
         width: 178vh;
         height: 100vh;
         left: calc(50vw - 89vh); /* (fullWidth - actualWidth) / 2 */
+    }
+    footer {
+        top: 100vh;
     }
 }
 
