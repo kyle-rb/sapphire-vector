@@ -47,8 +47,8 @@ a:hover {
 #droplet-leaf-box, #droplet-leaf, #ripple-leaf-1, #ripple-leaf-2, #ripple-leaf-3,
 #droplet-left-box, #droplet-left, #ripple-left-1, #ripple-left-2, #ripple-left-3,
 #droplet-right-box, #droplet-right, #ripple-right-1, #ripple-right-2, #ripple-right-3,
-#latias-silhouette-box, #latias-silhouette,
-#ocean-background, #grass-patch-box, #grass-patch-1, #grass-patch-2, #grass-patch-3,
+#latias-silhouette-box, #latias-silhouette, #ocean-background,
+#grass-patch-box, #grass-patch-1, #grass-patch-2, #grass-patch-3, #grass-patch-4, #grass-patch-5,
 #cloud-speed-1, #cloud-speed-2, #cloud-speed-3, #cloud-speed-4,
 #cloud-xl-1, #cloud-xl-2, #cloud-l-1, #cloud-l-2, #cloud-l-3, #cloud-l-4, #cloud-l-5,
 #cloud-m-1, #cloud-m-2, #cloud-m-3, #cloud-m-4, #cloud-s-1, #cloud-s-2, #cloud-s-3, #cloud-s-4,
@@ -280,18 +280,20 @@ a:hover {
     animation-name: grass-patch-box;
 }
 
-#grass-patch-1, #grass-patch-2, #grass-patch-3 {
-    width: 55%;
+#grass-patch-1, #grass-patch-2, #grass-patch-3, #grass-patch-4, #grass-patch-5 {
+    width: 58%; /* previously 55%, changed for compatibility */
     top: 0;
     left: 0;
     opacity: 0;
     animation-name: grass-patch;
-    animation-duration: 2s;
+    animation-duration: 2.0s;
     animation-iteration-count: 20; /* about 40 seconds total, which should be plenty */
 }
 #grass-patch-1 { animation-delay: 0.0s; }
-#grass-patch-2 { animation-delay: 0.667s; }
-#grass-patch-3 { animation-delay: 1.333s; }
+#grass-patch-2 { animation-delay: 0.4s; }
+#grass-patch-3 { animation-delay: 0.8s; }
+#grass-patch-4 { animation-delay: 1.2s; }
+#grass-patch-5 { animation-delay: 1.6s; }
 
 #bike-box {
     width: 100%;
@@ -986,7 +988,7 @@ a:hover {
     0.1%  { opacity: 1;
             transform: translateX(-98%); }
     99.9% { opacity: 1;
-            transform: translateX(196%); }
+            transform: translateX(170%); } /* previously 196%, changed for compatibility */
     100%  { opacity: 0; }
 }
 

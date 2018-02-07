@@ -18,7 +18,7 @@ function modifyFile(fileName, fileData) {
     //     units, and replaces with original tag minus height and width ]
 
     // remove this attribute which screws with my matching and is apparently deprecated anyway:
-    fileData = fileData.replace(/enable-background="(\w)" /g, '');
+    fileData = fileData.replace(/enable-background="\w*" /g, '');
 
     // because we're inlining all the SVG images, id must be unique across all files, so we need to
     //   prefix each id with the name of the file that it was originally in:
