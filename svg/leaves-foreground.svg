@@ -12,16 +12,7 @@
    height="720mm"
    width="1280mm">
   <defs
-     id="defs2">
-    <filter
-       id="filter902"
-       style="color-interpolation-filters:sRGB">
-      <feBlend
-         id="feBlend904"
-         in2="BackgroundImage"
-         mode="soft-light" />
-    </filter>
-  </defs>
+     id="defs2" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -165,7 +156,7 @@
     <path
        id="path840"
        d="m 786.03199,382.71297 c 90.12089,-5.08608 178.41466,10.1814 264.58341,10.7487 97.3908,3.24071 189.16,2.68311 229.7534,-32.4528 l -0.083,-39.94424 z"
-       style="display:inline;fill:#04480c;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter902)" />
+       style="display:inline;fill:#04480c;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        id="path830"
        d="M 1280.0835,186.78076 C 1126.9,181.90674 978.99921,182.94087 884.42392,238.8458 c -93.1996,53.48252 -218.87177,149.75027 -218.28125,170.32551 0.4119,14.12902 133.12115,-40.53888 231.95321,-35.73176 110.21172,4.86372 224.52932,-0.10785 382.07652,-41.57923 0.8,-48.61205 0.4632,-96.80555 -0.089,-145.07956 z"
